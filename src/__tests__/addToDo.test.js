@@ -5,7 +5,7 @@ describe('Todo React', () => {
     let page
 
     beforeAll(async () => {
-        browser = await puppeteer.launch()
+        browser = await puppeteer.launch({headless:false})
     })
 
     afterEach(async () => {
