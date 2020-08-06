@@ -11,7 +11,7 @@ describe('Todo React', () => {
     afterEach(async () => {
         await page.close()
       })
-    
+
       afterAll(async () => {
         await browser.close()
       })
@@ -25,7 +25,7 @@ describe('Todo React', () => {
       it('should be possible to add task to the list', async () => {
           const taskInputField = await page.$x('//input[@placeholder="Enter task"]')
           const taskToAdd = "New Task"
-          await taskInputField[0].click() 
+          await taskInputField[0].click()
           await taskInputField[0].type(taskToAdd)
 
           await page.keyboard.press('Enter')
@@ -37,7 +37,7 @@ describe('Todo React', () => {
           for( let list of lists ) {
             toDo = await page.evaluate(el => el.getAttribute("value"), list);
           }
-          
+
           expect(toDo).toBe(taskToAdd)
         })
       })
