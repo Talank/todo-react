@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "gh-pages": "^5.0.0",
-    "jest": "^24.9.0",
+    "jest": "^29.7.0",
     "puppeteer": "^4.0.1"
   }
 }
